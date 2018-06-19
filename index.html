@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mocha/Chai</title>
+	<link href="node_modules/mocha/mocha.css" rel="stylesheet"/>
+</head>
+<body>
+	<div id="mocha"></div>
+	<!-- Scripts -->
+	<script type="text/javascript" src="node_modules/chai/chai.js"></script>
+	<script type="text/javascript" src="node_modules/mocha/mocha.js"></script>
+	<script type="text/javascript" src="node_modules/chai-http/dist/chai-http.js"></script>
+
+	<script type="text/javascript">
+		chai.use(chaiHttp);
+		mocha.setup("bdd");
+	</script>
+
+	<!-- Scripts Testes -->
+	<script type="text/javascript" src="tests/tests.js"></script>
+	<!-- Run Mocha -->
+	<script type="text/javascript">
+		mocha.run();
+	</script>
+
+	<h1>Teste Mocha / Chai </h1>
+</body>
+</html>
